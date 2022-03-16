@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ToDoList App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static %}
+    <link id="sheet-theme" rel="stylesheet" type="text/css" href="{% static 'base\light.css' %}"> 
+
+    <!-- Nunito Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="javascript:changeAtNight()">
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    
+    <script type="text/javascript">
+
+        
+        var darkTheme = "{% static 'base/dark.css' %}"
+        var lightTheme = "{% static 'base/light.css' %}"
+
+        function changeAtNight() {
+            var cTime = new Date()
+            if (cTime.getHours() <= 6 | cTime.getHours() >= 20) {
+                checkBox = document.getElementById("switch")
+                document.getElementById("sheet-theme").href = darkTheme
+                checkBox.checked = true
+            }
+        }
+
+        function setTheme() {
+            var checkBox = document.getElementById("switch")
+            if (checkBox.checked == true) {
+                theme = darkTheme
+            } else {
+                theme = lightTheme
+            }
+            document.getElementById("sheet-theme").href = theme
+        }
+
+    </script>
+</body>
+
+
+</html>

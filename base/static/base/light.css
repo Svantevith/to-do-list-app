@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+body {
+    background-color: #fafafa;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 50px;
+}
+
+.container {
+    max-width: 65%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    border-radius: 8px;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 16px;
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(40deg, #ffa45e, #ff5e63 70%);
+}
+
+.header-bar a {
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+}
+
+.task-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: white;
+    border-top: 1px solid rgb(230, 230, 230);
+    border-radius: 0 0 8px 8px;
+}
+
+.task-title {
+    display: flex;
+}
+
+.task-title a {
+    text-decoration: none;
+    color: #666666;
+    margin-left: 8px;
+}
+
+.task-complete-icon {
+    height: 16px;
+    width: 16px;
+    background-color: rgb(255, 173, 173);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.task-incomplete-icon {
+    height: 16px;
+    width: 16px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.delete-link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    line-height: 0;
+    transform: scale(1.25,1);
+    margin-right: 6px;
+}
+
+.card-body {
+    color: #666666;
+    padding: 16px;
+}
+
+.card-body a {
+    color: #ff5e63;
+    font-weight: bold;
+}
+
+#plain {
+    text-decoration: none;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+    border: 1px solid #ff8229;
+    border-radius: 4px;
+    padding: 8px;
+    width: 90%;
+}
+
+label {
+    padding-top: 8px !important;
+    display: block;
+}
+
+.button {
+    border: 1px solid;
+    background-color: #fff9f5;
+    color: #ff8229;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+#search-add-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+#add-link {
+    color: #ffa45e;
+    text-decoration: none;
+    font-size: 40px;
+    text-shadow: 1px 1px black;
+}

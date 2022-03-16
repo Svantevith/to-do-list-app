@@ -1,0 +1,17 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+    <div class="header-bar">
+        <a href="{% url 'task-list' %}">&#8592; Back</a>
+    </div>
+
+    <div class="card-body">
+        <form method='POST'>
+            <!-- Cross-Site Request Forger (CRSF Token) rejects the HTTP request if miissing or invalid -->
+            {% csrf_token %} 
+            {{form.as_p}}
+            <input class="button" type="submit" value="Submit">
+        </form>    
+    </div>
+{% endblock content %}
